@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .todo-container {
+    width: 420px;
+    padding: 30px;
+    border-radius: 25px;
+    background-image: url('todo-box-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+    text-align: center;
+  }
+  
+  .todo-container h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: 0.3s ease;
+  }
+  
+  li:hover {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff;
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  
+  li label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #ee0cd0;
+    cursor: pointer;
+  }
+  
+  li input[type="checkbox"] {
+    transform: scale(1.2);
+    accent-color: #3b82f6;
+    cursor: pointer;
+  }
+  
+  li i {
+    color: #3b82f6;
+    font-size: 18px;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  

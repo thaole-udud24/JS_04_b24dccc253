@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do List Sinh Viên</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-WyxQOa8RVJr0nA6GZf2VTh0Pv3Y0I3SYGCUbEVL3DJByexBtsQz0GklrLRYzZ6EqhwhU4kkYB4zGHXZdb2H1Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="todo-container">
+    <h2><i class="fas fa-list-check"></i> Việc cần làm hôm nay</h2>
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox">
+          <i class="fas fa-pen"></i> Làm bài tập Toán rời rạc
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          <i class="fas fa-book-open"></i> Đọc chương 3 sách Kinh tế học
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          <i class="fas fa-laptop-code"></i> Review code nhóm môn Web
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          <i class="fas fa-broom"></i> Dọn phòng trọ
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          <i class="fas fa-calendar-check"></i> Đăng ký lớp học kỹ năng mềm
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function () {
+        const parent = this.parentElement;
+        if (this.checked) {
+          parent.classList.add('completed');
+        } else {
+          parent.classList.remove('completed');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

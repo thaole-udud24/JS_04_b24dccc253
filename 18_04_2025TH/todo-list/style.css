@@ -1,0 +1,99 @@
+/* Bộ chọn thẻ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ccc;
+    background-color: #f9f9f9;
+    transition: 0.3s;
+}
+
+/* Bộ chọn ID */
+#main-title {
+    color: #101311;
+    font-size: 28px;
+}
+
+/* Bộ chọn class */
+.todo-list {
+    border: 2px dashed orange;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fffaf0;
+}
+
+.morning {
+    background-color: #ffe4b5;
+}
+
+.afternoon {
+    background-color: #e0ffff;
+}
+
+.evening {
+    background-color: #e6f7ff;
+}
+
+.important {
+    font-weight: bold;
+    color: #d2691e;
+}
+
+/* Bộ chọn nhóm */
+.morning, .afternoon, .evening {
+    border-left-color: #ffa07a;
+}
+
+/* Bộ chọn con trực tiếp */
+ul > li {
+    border-radius: 5px;
+}
+.important.morning {
+    background-color: #ffcc99;
+}
+
+.note[data-type="reminder"] {
+    font-style: italic;
+    color: green;
+    margin-top: 20px;
+}
+
+li:hover {
+    background-color: #f0f8ff;
+}
+
+li:first-child {
+    border-top: 3px solid green;
+}
+
+li:last-child {
+    border-bottom: 3px solid blue;
+}
+
+li:nth-child(odd) {
+    background-color: #fefbd8;
+}
+
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li:hover::after {
+    content: " ✅";
+    color: green;
+}
+
+input[type="checkbox"]:checked ~ * {
+    background-color: #d3ffd3;
+}

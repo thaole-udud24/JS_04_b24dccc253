@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Demo Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f0ec;
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #d9c8b4;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #7a5c37;
+            transform: translateX(10px);
+        }
+
+        .main-content {
+            margin-left: 250px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .info {
+            max-width: 500px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .info h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .profile-image img {
+            width: 300px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 30px;
+            color: #7a5c37;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+            padding: 20px;
+            border: 2px dashed #aaa;
+            box-sizing: border-box;
+        }
+
+        .item {
+            margin: 5px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 10px;
+        }
+
+        .item1 { background: #e74c3c; width: 60px; height: 60px; order: 2; flex-grow: 1; }
+        .item2 { background: #2ecc71; width: 80px; height: 100px; order: 1; flex-grow: 2; }
+        .item3 { background: #3498db; width: 100px; height: 60px; flex-shrink: 2; }
+        .item4 { background: #f1c40f; width: 70px; height: 70px; flex-basis: 100px; }
+        .item5 { background: #9b59b6; width: 120px; height: 80px; flex: 1 1 150px; }
+        .item6 { background: #1abc9c; width: 60px; height: 120px; }
+        .item7 { background: #e67e22; width: 90px; height: 90px; align-self: flex-end; }
+        .item8 { background: #34495e; width: 70px; height: 70px; align-self: flex-start; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Mèo mun</h2>
+        <nav class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Dịch vụ</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="info">
+            <h1>Chào mừng bạn!</h1>
+            <p>Đây là trang web demo về Flexbox và Sidebar.</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+            </div>
+            <div class="profile-image">
+                <img src="anh1.jpeg" alt="Profile Image">
+            </div>
+        </div>
+
+        <h2>Flexbox Demo</h2>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+            <div class="item item6">6</div>
+            <div class="item item7">7</div>
+            <div class="item item8">8</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

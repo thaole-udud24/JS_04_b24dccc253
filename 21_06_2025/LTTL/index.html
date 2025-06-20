@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thực hành Timing JS</title>
+</head>
+<body>
+  <h2 id="title">Chuẩn bị...</h2>
+  <h1 id="countdown">5</h1>
+
+  <script>
+    let count = 5;
+    const countdownEl = document.getElementById('countdown');
+    const titleEl = document.getElementById('title');
+
+    const timer = setInterval(() => {
+      count--;
+      countdownEl.textContent = count;
+
+      if (count === 0) {
+        clearInterval(timer);
+        setTimeout(() => {
+          titleEl.textContent = 'Hết giờ!';
+          countdownEl.textContent = 'Bắt đầu thôi!';
+        }, 1000);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
